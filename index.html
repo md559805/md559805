@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Matt<span>Razmjoy</span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#services">Services</a>
+            <a href="#My-Chart">My Chart</a>
+            <a href="#contant">Contant</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Matt</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>passionate and driven individual born on October 18, 2005, with a deep interest in coding, web
+                development, and creative expression. My journey began with a love for technology and a commitment to
+                self-improvement, as I continue to refine my skills in languages like C++, Python, html, CSS and
+                Javascript while exploring new challenges in web design. Outside of coding, I find joy in writing,
+                painting, and music, which help me channel my emotions and maintain a balanced life. As a perfectionist
+                and lifelong learner, I strive to create meaningful projects and leave a positive impact through my
+                work.</p>
+
+            <div class="social-icons">
+                <a href="https://github.com/md559805" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/md559805?igsh=dGkxeTUxY3dqOWl1&utm_source=qr" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://x.com/Md559805?s=09" target="_blank" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://t.me/Md559805" target="_blank"><i class='bx bxl-telegram'></i></a>
+                <a href="https://wa.me/qr/5ZZSUN5PVXTDO1" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn">Hire</a>
+                <a href="#contant" class="btn">Contact</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="IMG_5772.JPG" alt="">
+
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h3>High School</h3>
+                    <p>I graduated from high school with a focus on mathematics and physics, which laid the
+                        foundation
+                        for my passion for problem-solving and analytical thinking. This background inspired me to
+                        pursue Computer Engineering and further explore the world of technology and innovation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
+                <div class="timeline-content">
+                    <h3>University</h3>
+                    <p>I am currently pursuing a degree in Computer Engineering, where I am developing expertise in
+                        programming, system design, and software development. My passion lies in solving complex
+                        problems and creating innovative solutions that make a meaningful impact.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
+                <div class="timeline-content">
+                    <h3>Self Employed</h3>
+                    <p>I am self-employed, leveraging my skills in technology and problem-solving to work on diverse
+                        projects. This independence has allowed me to take on challenges, manage my time
+                        effectively, and continuously grow both professionally and personally.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Services</h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>UI Design</h4>
+                    <p>I have a keen interest in UI Design, where I focus on creating visually appealing and
+                        user-friendly interfaces that enhance the overall user experience.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Frontend Development</h4>
+                    <p>I specialize in Frontend Development, creating visually engaging, responsive, and user-friendly
+                        interfaces using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Backend Development</h4>
+                    <p>I am skilled in Backend Development. With experience in technologies like Node.js, Python, and
+                        databases, I
+                        ensure seamless functionality and data management for applications.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>App Development</h4>
+                    <p>I am passionate about App Development, creating intuitive and responsive mobile applications that
+                        provide a seamless user experience. Using tools like Flutter, React Native, or native
+                        development frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="My-Chart" id="My-Chart">
+        <h2 class="heading">My Chart</h2>
+        <div class="chart-container">
+            <canvas id="progressChart"></canvas>
+        </div>
+
+        <div class="progress-table">
+            <h2>Progress Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Hours Practiced</th>
+                        <th>Improvement (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>49</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>52</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>42</td>
+                        <td>67%</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>46</td>
+                        <td>69%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="contant" id="contant">
+        <h2 class="heading">Contant <span>Me</span></h2>
+
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+
+                <div class="input-group-2">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message" class="btn">
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://github.com/md559805" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/md559805?igsh=dGkxeTUxY3dqOWl1&utm_source=qr" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://x.com/Md559805?s=09" target="_blank" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://t.me/Md559805" target="_blank"><i class='bx bxl-telegram'></i></a>
+            <a href="https://wa.me/qr/5ZZSUN5PVXTDO1" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+
+        <ul class="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">My Chart</a></li>
+        </ul>
+        <p class="copyright">
+            © Matt Razmjoy | All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+</body>
+
+</html>
