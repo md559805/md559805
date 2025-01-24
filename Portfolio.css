@@ -424,7 +424,6 @@ span {
 .services h2 {
     margin-bottom: 5rem;
     color: white;
-    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .services-container {
@@ -436,7 +435,7 @@ span {
 
 .service-box {
     background-color: var(--main-color);
-    height: 300px;
+    min-height: 400px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
