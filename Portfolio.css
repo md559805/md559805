@@ -16,18 +16,20 @@
     --second-bg-color: #131313;
     --textcolor: white;
     --main-color: #ff0000;
+    --transition-speed: 0.3s;
 }
 
 html {
     font-size: 60%;
     overflow-x: hidden;
     overflow-y: auto;
-
 }
 
 body {
     background: var(--bg-color);
     color: var(--textcolor);
+    line-height: 1.6;
+    font-size: 1.6rem;
 }
 
 .header {
@@ -35,13 +37,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 4rem;
-    background-color: rgb(0, 0, 0, 0.3);
+    padding: 2rem 12%;
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    transition: var(--transition-speed) ease-in-out;
 }
 
 .logo {
@@ -49,7 +52,7 @@ body {
     color: var(--textcolor);
     font-weight: 800;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: var(--transition-speed) ease;
 }
 
 .logo:hover {
@@ -65,7 +68,7 @@ body {
     color: var(--textcolor);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: var(--transition-speed) ease;
     border-bottom: 3px solid transparent;
 }
 
@@ -79,11 +82,12 @@ body {
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+    margin-left: 1rem;
 }
 
 section {
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    padding: 10rem 12%;
 }
 
 .home {
@@ -107,7 +111,7 @@ span {
 }
 
 .logo span {
-    color: var(--main-color)
+    color: var(--main-color);
 }
 
 .home-content h3 {
@@ -134,7 +138,7 @@ span {
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
-    transition: 0.4s ease-in-out;
+    transition: var(--transition-speed) ease-in-out;
 }
 
 .home-img img:hover {
@@ -162,7 +166,7 @@ span {
     border-radius: 50%;
     color: var(--main-color);
     margin: 2rem 1rem;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-speed) ease-in-out;
     margin-left: 0;
 }
 
@@ -172,7 +176,6 @@ span {
     box-shadow: 0 0 25px var(--main-color);
     transform: scale(1.3) translateY(-5px);
 }
-
 
 .btn {
     display: inline-block;
@@ -185,7 +188,7 @@ span {
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-speed) ease-in-out;
     cursor: pointer;
 }
 
@@ -208,7 +211,7 @@ span {
 }
 
 .btn-group a:nth-of-type(2):hover {
-    box-shadow: 0 0 25px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     color: black;
 }
@@ -250,27 +253,27 @@ span {
 
     0%,
     20% {
-        content: "Frontend Desiner";
+        content: "Frontend Developer";
     }
 
     21%,
     40% {
-        content: "Website Desiner";
+        content: "Website Designer";
     }
 
     41%,
     60% {
-        content: "Backend Developer";
+        content: "C++ Developer";
     }
 
     61%,
     80% {
-        content: "Web Developer";
+        content: "App Developer";
     }
 
     81%,
     100% {
-        content: "UI / UX Desiner";
+        content: "UI / UX Designer";
     }
 }
 
@@ -297,9 +300,8 @@ span {
     65%,
     80%,
     85% {
-        width: calc(100% + 8px)
+        width: calc(100% + 8px);
     }
-
 }
 
 .heading {
@@ -381,11 +383,13 @@ span {
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    color: var(--textcolor);
 }
 
 .timeline-content:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color);
+    color: var(--textcolor);
 
 }
 
@@ -414,6 +418,156 @@ span {
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
     width: 50px;
+}
+
+.projects {
+    background: var(--second-bg-color);
+    color: white;
+    padding: 2rem;
+}
+
+.projects h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-box {
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 1.5rem;
+}
+
+.project-box:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.project-box img {
+    width: 100%;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-box h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.project-box p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: var(--bg-color);
+    color: white;
+    padding: 2rem;
+}
+
+.testimonials h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.testimonial-box {
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 1.5rem;
+}
+
+.testimonial-box:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.testimonial-box p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.testimonial-box h4 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Blog Section */
+.blog {
+    background: var(--second-bg-color);
+    color: white;
+    padding: 2rem;
+}
+
+.blog h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.blog-post {
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 1.5rem;
+}
+
+.blog-post:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.blog-post h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.blog-post p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.blog-post .btn {
+    margin-top: 1rem;
 }
 
 .services {
@@ -473,6 +627,7 @@ span {
     margin-top: 1rem;
 }
 
+
 .My-Chart {
     padding: 100px 15px;
     background: var(--second-bg-color);
@@ -492,11 +647,13 @@ span {
     position: relative;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    color: var(--textcolor);
 }
 
 .chart-container:hover {
     transform: scale(1.03);
     box-shadow: 0 0 25px var(--main-color);
+    color: var(--textcolor);
 }
 
 canvas#progressChart {
@@ -584,47 +741,132 @@ table tbody td:nth-child(3) {
     table tbody td {
         font-size: 1.2rem;
     }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .navbar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        background: none;
+        height: auto;
+        width: auto;
+        transition: none;
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+        color: var(--textcolor);
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 2.4rem;
+        color: var(--main-color);
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    #light-mode-toggle {
+        display: block;
+        font-size: 2rem;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
 }
 
-.contant {
+.contact {
     background-color: var(--bg-color);
+    color: var(--textcolor);
+    padding: 2rem;
 }
 
-.contant h2 {
-    margin-bottom: 3rem;
-    color: white;
+.contact h2 {
+    margin-bottom: 5rem;
+    color: var(--textcolor);
 }
 
-.contant form {
+.contact form {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 5rem auto;
-    text-align: center;
 }
 
-.contant form .input-box {
+.contact .input-group {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
-.contant form .input-box input,
-.contant form textarea {
+.contact .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact .input-box input,
+.contact .input-group-2 textarea {
     width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
+    padding: 1rem;
+    font-size: 1.6rem;
     color: var(--textcolor);
     background: var(--second-bg-color);
-    border-radius: 2rem;
+    border-radius: 1rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
     resize: none;
 }
 
-.contant form .btn {
-    margin-top: 2rem;
+.contact .input-group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact .input-group-2 .btn {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+/* Light mode styles for contact section */
+body.light-mode .contact {
+    background-color: #f0f0f0;
+    color: #080808;
+}
+
+body.light-mode .contact h2 {
+    color: #080808;
+}
+
+body.light-mode .contact .input-box input,
+body.light-mode .contact .input-group-2 textarea {
+    background: #d0d0d0;
+    color: #080808;
+    border: 2px solid var(--main-color);
+}
+
+/* Navbar active link color */
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+body.light-mode .navbar a.active {
+    color: #ff0000;
+    border-bottom: 3px solid #ff0000;
 }
 
 .footer {
@@ -747,6 +989,7 @@ table tbody td:nth-child(3) {
     .footer {
         padding: 2rem 3%;
     }
+
 }
 
 @media(max-width:895px) {
@@ -809,4 +1052,304 @@ table tbody td:nth-child(3) {
     .services-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #menu-icon {
+        display: block;
+        font-size: 2.4rem;
+        color: var(--main-color);
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    #light-mode-toggle {
+        display: block;
+        font-size: 2rem;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* Light mode styles */
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #080808;
+}
+
+.light-mode .header,
+.light-mode .footer {
+    background-color: #f0f0f0;
+}
+
+.light-mode .btn {
+    background-color: #f0f0f0;
+    color: #080808;
+}
+
+.light-mode .navbar a {
+    color: #080808;
+}
+
+
+.light-mode .timeline-content {
+    background-color: #f0f0f0;
+    border: 3px solid #ff0000;
+}
+
+.light-mode .timeline-content p {
+    color: #000;
+}
+
+.light-mode .timeline-content h3 {
+    color: #000;
+}
+
+.light-mode .timeline-date {
+    color: #000;
+}
+
+.light-mode .timeline-content:hover {
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.light-mode .progress-table {
+    background-color: #f0f0f0;
+}
+
+.light-mode .progress-table tbody tr:hover {
+    background: #ff0000;
+}
+
+.light-mode .logo {
+    color: #080808;
+}
+
+.light-mode .logo span {
+    color: #ff0000;
+}
+
+.light-mode .text-animation span::before {
+    color: #ff0000;
+}
+
+.light-mode .education,
+.light-mode .services,
+.light-mode .projects,
+.light-mode .testimonials,
+.light-mode .blog,
+.light-mode .My-Chart {
+    background-color: #f0f0f0;
+    color: #080808;
+}
+
+.light-mode .heading {
+    color: #080808;
+}
+
+.light-mode .project-box:hover {
+    background: #ffffff;
+    color: #080808;
+}
+
+.light-mode .testimonial-box:hover {
+    background: #ffffff;
+    color: #080808;
+}
+
+.light-mode .blog-post:hover {
+    background: #ffffff;
+    color: #080808;
+}
+
+.light-mode .service-box:hover {
+    background: #ffffff;
+    color: #080808;
+}
+
+.light-mode .chart-container:hover {
+    background: rgb(0, 0, 0);
+    color: #080808;
+}
+
+.light-mode .progress-table tbody tr:hover {
+    background: #ff0000;
+    color: #ffffff;
+}
+
+.light-mode .navbar {
+    background-color: #f0f0f0;
+}
+
+.light-mode .text-animation span::after {
+    background-color: #ffffff;
+    border-left: 3px solid #ffffff;
+}
+
+.light-mode #con {
+    background-color: #f0f0f0;
+}
+
+.light-mode .chart-container {
+    background-color: #ffffff;
+}
+
+.light-mode .chart-container:hover {
+    background-color: #ffffff;
+}
+
+.light-mode .progress-table h2 {
+    color: var(--main-color);
+}
+
+.light-mode table {
+    background: #ffffff;
+}
+
+.light-mode table thead {
+    background: var(--main-color);
+    color: #000;
+}
+
+
+.light-mode table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.light-mode table tbody tr:hover {
+    background: var(--main-color);
+}
+
+.light-mode table tbody td {
+    color: #000;
+}
+
+.light-mode table tbody td:nth-child(3) {
+    color: #000;
+}
+
+.light-mode .footer ul li a {
+    color: #000;
+}
+
+.light-mode .footer .copyright {
+    color: #000;
+}
+
+#light-mode-toggle {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#light-mode-toggle .icon-sun {
+    display: none;
+}
+
+body.light-mode #light-mode-toggle {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.light-mode #light-mode-toggle .icon-sun {
+    display: inline;
+}
+
+body.light-mode #light-mode-toggle .icon-moon {
+    display: none;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover i {
+    transform: rotateY(360deg);
+}
+
+.skill-box h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textcolor);
+}
+
+
+body.light-mode .skill-box {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .skill-box i {
+    color: #ff0000;
+}
+
+body.light-mode .skill-box h4 {
+    color: #080808;
+}
+
+/* Add this CSS for the language selector and back-to-top button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: white;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 17px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+    background-color: var(--main-color);
+}
+
+.light-mode #back-to-top {
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+}
+
+.light-mode #back-to-top:hover {
+    background-color: var(--main-color);
 }

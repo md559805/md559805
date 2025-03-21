@@ -4,6 +4,12 @@ let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
 
+// Ensure the navbar is closed by default
+document.addEventListener('DOMContentLoaded', () => {
+    navbar.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+});
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -24,14 +30,17 @@ window.onscroll = () => {
     });
 };
 
+// Toggle navbar visibility
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
 
-
-
-
+// Toggle Button
+const toggleButton = document.getElementById('light-mode-toggle');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+});
 
 // Chart.js Configuration
 const ctx = document.getElementById('progressChart').getContext('2d');
@@ -43,13 +52,13 @@ const progressChart = new Chart(ctx, {
             {
                 label: 'Hours Practiced',
                 data: [49, 52, 42, 46],
-                backgroundColor: 'white', // Bar colors
-                borderColor: 'white',
+                backgroundColor: '#d0d0d0add', // Bar colors
+                borderColor: '#d0d0d0',
                 borderWidth: 2,
             },
             {
                 label: 'Improvement (%)',
-                data: [70, 75, 67, 69],
+                data: [70, 50, 67, 69],
                 backgroundColor: '#ff0000',
                 borderColor: '#ff0000',
                 borderWidth: 2,
@@ -62,27 +71,56 @@ const progressChart = new Chart(ctx, {
             legend: {
                 position: 'top',
                 labels: {
-                    color: 'white', // Legend label color
+                    color: '#d0d0d0', // Legend label color
                 },
             },
         },
         scales: {
             x: {
                 ticks: {
-                    color: 'white', // X-axis label color
+                    color: '#d0d0d0', // X-axis label color
                 },
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.2)', // X-axis gridline color
+                    color: 'rgba(255, 255, 255, 0)', // X-axis gridline color
                 },
             },
             y: {
                 ticks: {
-                    color: 'white', // Y-axis label color
+                    color: '#d0d0d0', // Y-axis label color
                 },
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.2)', // Y-axis gridline color
+                    color: 'rgba(255, 255, 255, 0)', // Y-axis gridline color
                 },
             },
         },
     },
 });
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en', 
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 
+        'google_translate_element'
+    );
+}
+
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
+
+// Show or hide the button based on scroll position
+window.onscroll = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// Scroll to the top when the button is clicked
+backToTopButton.onclick = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+
