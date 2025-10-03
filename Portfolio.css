@@ -237,7 +237,7 @@ span {
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 100%;
+    height: 50px;
     border-left: 3px solid var(--bg-color);
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
@@ -421,7 +421,7 @@ span {
 }
 
 .projects {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: white;
     padding: 2rem;
 }
@@ -474,7 +474,7 @@ span {
 
 /* Testimonials Section */
 .testimonials {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: white;
     padding: 2rem;
 }
@@ -571,7 +571,7 @@ span {
 }
 
 .services {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: white;
     padding: 2rem;
 }
@@ -596,6 +596,7 @@ span {
     cursor: pointer;
     transition: 0.4s ease-in-out;
     padding: 1.5rem;
+    height: 200px;
 }
 
 .service-box:hover {
@@ -630,7 +631,7 @@ span {
 
 .My-Chart {
     padding: 100px 15px;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .chart-container {
@@ -786,7 +787,7 @@ table tbody td:nth-child(3) {
 }
 
 .contact {
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
     color: var(--textcolor);
     padding: 2rem;
 }
@@ -874,7 +875,7 @@ body.light-mode .navbar a.active {
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .footer .social {
@@ -1330,18 +1331,30 @@ body.light-mode .skill-box h4 {
     right: 20px;
     z-index: 1000;
     background-color: white;
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 17px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    font-size: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 0 10px var(--main-color);
+    transition: transform 0.3s
+}
+
+#back-to-top img {
+    width: 20px;
+    height: 20px; 
+    transition: transform 0.3s ease-in-out;
+    color: #000;
+}
+
+#back-to-top img:hover {
+    transform: scale(1.1);
+
 }
 
 #back-to-top:hover {
     background-color: var(--main-color);
+    transform: scale(1.1);
 }
 
 .light-mode #back-to-top {
@@ -1352,4 +1365,8 @@ body.light-mode .skill-box h4 {
 
 .light-mode #back-to-top:hover {
     background-color: var(--main-color);
+}
+
+.light-mode #back-to-top img {
+    filter: invert(1);
 }
